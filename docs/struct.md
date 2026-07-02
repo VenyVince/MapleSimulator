@@ -42,13 +42,34 @@ SimulationEngine
     → nextDay 
 ```
 
-## 3. 구현 우선순위
+## 3. 구현 순서
+```text
+1. web/types
+   ├── gameData.ts
+   ├── routine.ts
+   ├── simulation.ts
+   └── result.ts
 
-1. ExpService
-2. LevelService
-3. HuntingService
-4. ContentService
-5. ItemService
-6. DailySimulationService
-7. ResultBuilder
-8. SimulationContext
+2. jsonData
+   ├── expTable.json
+   ├── monsters.json
+   ├── maps.json
+   ├── contents.json
+   ├── items.json
+   └── buffs.json
+
+3. web/engine/services
+   ├── ExpService.ts
+   ├── LevelService.ts
+   ├── HuntingService.ts
+   ├── ContentService.ts
+   └── ItemService.ts
+
+4. web/engine/SimulationContext.ts
+
+5. web/engine/DailySimulationService.ts
+
+6. web/engine/ResultBuilder.ts
+
+7. web/engine/SimulationEngine.ts
+```
