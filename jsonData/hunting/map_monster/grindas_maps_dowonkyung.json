@@ -1,0 +1,246 @@
+{
+  "region": "도원경",
+  "note": "totalExp = monsterExp * monsterCount (레벨차 배율 미적용, 캐릭터 레벨에 따라 시뮬레이터에서 별도 적용 필요). 반레벨(.5) 맵은 정수부 기준(floor)으로 몬스터를 매칭함.",
+  "maps": [
+    {
+      "region": "도원경",
+      "name": "생기가 돌아오는 봄 1",
+      "level": 275,
+      "monsterCount": 34,
+      "monsters": [
+        "종달새",
+        "시든 봄의 연구자",
+        "먹그늘 나비"
+      ],
+      "monsterExp": 2903024,
+      "totalExp": 98702816
+    },
+    {
+      "region": "도원경",
+      "name": "생기가 돌아오는 봄 2",
+      "level": 275,
+      "monsterCount": 39,
+      "monsters": [
+        "종달새",
+        "시든 봄의 연구자",
+        "먹그늘 나비"
+      ],
+      "monsterExp": 2903024,
+      "totalExp": 113217936
+    },
+    {
+      "region": "도원경",
+      "name": "생기가 돌아오는 봄 3",
+      "level": 275,
+      "monsterCount": 39,
+      "monsters": [
+        "종달새",
+        "시든 봄의 연구자",
+        "먹그늘 나비"
+      ],
+      "monsterExp": 2903024,
+      "totalExp": 113217936
+    },
+    {
+      "region": "도원경",
+      "name": "생기가 돌아오는 봄 4",
+      "level": 275,
+      "monsterCount": 39,
+      "monsters": [
+        "종달새",
+        "시든 봄의 연구자",
+        "먹그늘 나비"
+      ],
+      "monsterExp": 2903024,
+      "totalExp": 113217936
+    },
+    {
+      "region": "도원경",
+      "name": "생기가 돌아오는 봄 5",
+      "level": 275,
+      "monsterCount": 39,
+      "monsters": [
+        "종달새",
+        "시든 봄의 연구자",
+        "먹그늘 나비"
+      ],
+      "monsterExp": 2903024,
+      "totalExp": 113217936
+    },
+    {
+      "region": "도원경",
+      "name": "빛이 약한 여름 1",
+      "level": 276,
+      "monsterCount": 34,
+      "monsters": [
+        "빛 없는 여름의 연구자",
+        "묵그림자 두루미"
+      ],
+      "monsterExp": 2939616,
+      "totalExp": 99946944
+    },
+    {
+      "region": "도원경",
+      "name": "빛이 약한 여름 2",
+      "level": 276,
+      "monsterCount": 39,
+      "monsters": [
+        "빛 없는 여름의 연구자",
+        "묵그림자 두루미"
+      ],
+      "monsterExp": 2939616,
+      "totalExp": 114645024
+    },
+    {
+      "region": "도원경",
+      "name": "빛이 약한 여름 3",
+      "level": 276,
+      "monsterCount": 39,
+      "monsters": [
+        "빛 없는 여름의 연구자",
+        "묵그림자 두루미"
+      ],
+      "monsterExp": 2939616,
+      "totalExp": 114645024
+    },
+    {
+      "region": "도원경",
+      "name": "빛이 약한 여름 4",
+      "level": 276,
+      "monsterCount": 39,
+      "monsters": [
+        "빛 없는 여름의 연구자",
+        "묵그림자 두루미"
+      ],
+      "monsterExp": 2939616,
+      "totalExp": 114645024
+    },
+    {
+      "region": "도원경",
+      "name": "빛이 약한 여름 5",
+      "level": 276,
+      "monsterCount": 39,
+      "monsters": [
+        "빛 없는 여름의 연구자",
+        "묵그림자 두루미"
+      ],
+      "monsterExp": 2939616,
+      "totalExp": 114645024
+    },
+    {
+      "region": "도원경",
+      "name": "색깔이 옅은 가을 1",
+      "level": 277,
+      "monsterCount": 34,
+      "monsters": [
+        "색 잃은 가을의 연구자",
+        "먹자국 담비"
+      ],
+      "monsterExp": 2981010,
+      "totalExp": 101354340
+    },
+    {
+      "region": "도원경",
+      "name": "색깔이 옅은 가을 2",
+      "level": 277,
+      "monsterCount": 39,
+      "monsters": [
+        "색 잃은 가을의 연구자",
+        "먹자국 담비"
+      ],
+      "monsterExp": 2981010,
+      "totalExp": 116259390
+    },
+    {
+      "region": "도원경",
+      "name": "색깔이 옅은 가을 3",
+      "level": 277,
+      "monsterCount": 39,
+      "monsters": [
+        "색 잃은 가을의 연구자",
+        "먹자국 담비"
+      ],
+      "monsterExp": 2981010,
+      "totalExp": 116259390
+    },
+    {
+      "region": "도원경",
+      "name": "색깔이 옅은 가을 4",
+      "level": 277,
+      "monsterCount": 39,
+      "monsters": [
+        "색 잃은 가을의 연구자",
+        "먹자국 담비"
+      ],
+      "monsterExp": 2981010,
+      "totalExp": 116259390
+    },
+    {
+      "region": "도원경",
+      "name": "색깔이 옅은 가을 5",
+      "level": 277,
+      "monsterCount": 39,
+      "monsters": [
+        "색 잃은 가을의 연구자",
+        "먹자국 담비"
+      ],
+      "monsterExp": 2981010,
+      "totalExp": 116259390
+    },
+    {
+      "region": "도원경",
+      "name": "참혹한 흔적의 겨울 1",
+      "level": 278,
+      "monsterCount": 34,
+      "monsters": [
+        "참혹한 겨울의 연구자"
+      ],
+      "monsterExp": 3017988,
+      "totalExp": 102611592
+    },
+    {
+      "region": "도원경",
+      "name": "참혹한 흔적의 겨울 2",
+      "level": 278.5,
+      "monsterCount": 39,
+      "monsters": [
+        "참혹한 겨울의 연구자"
+      ],
+      "monsterExp": 3017988,
+      "totalExp": 117701532
+    },
+    {
+      "region": "도원경",
+      "name": "참혹한 흔적의 겨울 3",
+      "level": 279,
+      "monsterCount": 39,
+      "monsters": [
+        "묵날개 올빼미"
+      ],
+      "monsterExp": 3059716,
+      "totalExp": 119328924
+    },
+    {
+      "region": "도원경",
+      "name": "참혹한 흔적의 겨울 4",
+      "level": 279,
+      "monsterCount": 39,
+      "monsters": [
+        "묵날개 올빼미"
+      ],
+      "monsterExp": 3059716,
+      "totalExp": 119328924
+    },
+    {
+      "region": "도원경",
+      "name": "참혹한 흔적의 겨울 5",
+      "level": 279,
+      "monsterCount": 39,
+      "monsters": [
+        "묵날개 올빼미"
+      ],
+      "monsterExp": 3059716,
+      "totalExp": 119328924
+    }
+  ]
+}

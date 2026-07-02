@@ -1,0 +1,163 @@
+{
+  "region": "기어드락",
+  "note": "totalExp = monsterExp * monsterCount (레벨차 배율 미적용, 캐릭터 레벨에 따라 시뮬레이터에서 별도 적용 필요). 반레벨(.5) 맵은 정수부 기준(floor)으로 몬스터를 매칭함.",
+  "maps": [
+    {
+      "region": "기어드락",
+      "name": "지하 1층",
+      "level": 295,
+      "monsterCount": 40,
+      "monsters": [
+        "감시 로봇",
+        "순찰형 경비 로봇"
+      ],
+      "monsterExp": 5643220,
+      "totalExp": 225728800
+    },
+    {
+      "region": "기어드락",
+      "name": "지하 2층 1구역",
+      "level": 295,
+      "monsterCount": 40,
+      "monsters": [
+        "감시 로봇",
+        "순찰형 경비 로봇"
+      ],
+      "monsterExp": 5643220,
+      "totalExp": 225728800
+    },
+    {
+      "region": "기어드락",
+      "name": "지하 2층 2구역",
+      "level": 295,
+      "monsterCount": 40,
+      "monsters": [
+        "감시 로봇",
+        "순찰형 경비 로봇"
+      ],
+      "monsterExp": 5643220,
+      "totalExp": 225728800
+    },
+    {
+      "region": "기어드락",
+      "name": "지하 3층 1구역",
+      "level": 296,
+      "monsterCount": 40,
+      "monsters": [
+        "공격형 경비 로봇"
+      ],
+      "monsterExp": 5711948,
+      "totalExp": 228477920
+    },
+    {
+      "region": "기어드락",
+      "name": "지하 3층 2구역",
+      "level": 296,
+      "monsterCount": 40,
+      "monsters": [
+        "공격형 경비 로봇"
+      ],
+      "monsterExp": 5711948,
+      "totalExp": 228477920
+    },
+    {
+      "region": "기어드락",
+      "name": "지하 4층",
+      "level": 296,
+      "monsterCount": 40,
+      "monsters": [
+        "공격형 경비 로봇"
+      ],
+      "monsterExp": 5711948,
+      "totalExp": 228477920
+    },
+    {
+      "region": "기어드락",
+      "name": "로봇 창고 1",
+      "level": 297,
+      "monsterCount": 40,
+      "monsters": [
+        "일반형 병기 로봇"
+      ],
+      "monsterExp": 5781080,
+      "totalExp": 231243200
+    },
+    {
+      "region": "기어드락",
+      "name": "로봇 창고 2",
+      "level": 297,
+      "monsterCount": 40,
+      "monsters": [
+        "일반형 병기 로봇"
+      ],
+      "monsterExp": 5781080,
+      "totalExp": 231243200
+    },
+    {
+      "region": "기어드락",
+      "name": "로봇 창고 3",
+      "level": 297,
+      "monsterCount": 40,
+      "monsters": [
+        "일반형 병기 로봇"
+      ],
+      "monsterExp": 5781080,
+      "totalExp": 231243200
+    },
+    {
+      "region": "기어드락",
+      "name": "로봇 창고 4",
+      "level": 297,
+      "monsterCount": 40,
+      "monsters": [
+        "일반형 병기 로봇"
+      ],
+      "monsterExp": 5781080,
+      "totalExp": 231243200
+    },
+    {
+      "region": "기어드락",
+      "name": "로봇 창고 5",
+      "level": 298,
+      "monsterCount": 40,
+      "monsters": [
+        "강화형 병기 로봇"
+      ],
+      "monsterExp": 5842650,
+      "totalExp": 233706000
+    },
+    {
+      "region": "기어드락",
+      "name": "로봇 창고 6",
+      "level": 298,
+      "monsterCount": 40,
+      "monsters": [
+        "강화형 병기 로봇"
+      ],
+      "monsterExp": 5842650,
+      "totalExp": 233706000
+    },
+    {
+      "region": "기어드락",
+      "name": "로봇 창고 7",
+      "level": 298,
+      "monsterCount": 40,
+      "monsters": [
+        "강화형 병기 로봇"
+      ],
+      "monsterExp": 5842650,
+      "totalExp": 233706000
+    },
+    {
+      "region": "기어드락",
+      "name": "로봇 창고 8",
+      "level": 298,
+      "monsterCount": 40,
+      "monsters": [
+        "강화형 병기 로봇"
+      ],
+      "monsterExp": 5842650,
+      "totalExp": 233706000
+    }
+  ]
+}

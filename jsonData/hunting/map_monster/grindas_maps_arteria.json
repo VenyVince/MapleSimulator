@@ -1,0 +1,237 @@
+{
+  "region": "아르테리아",
+  "note": "totalExp = monsterExp * monsterCount (레벨차 배율 미적용, 캐릭터 레벨에 따라 시뮬레이터에서 별도 적용 필요). 반레벨(.5) 맵은 정수부 기준(floor)으로 몬스터를 매칭함.",
+  "maps": [
+    {
+      "region": "아르테리아",
+      "name": "북쪽 외곽 지역",
+      "level": 280,
+      "monsterCount": 36,
+      "monsters": [
+        "하이레프 정찰 드론",
+        "하이레프 보병"
+      ],
+      "monsterExp": 3436027,
+      "totalExp": 123696972
+    },
+    {
+      "region": "아르테리아",
+      "name": "서쪽 외곽 지역",
+      "level": 280,
+      "monsterCount": 40,
+      "monsters": [
+        "하이레프 정찰 드론",
+        "하이레프 보병"
+      ],
+      "monsterExp": 3436027,
+      "totalExp": 137441080
+    },
+    {
+      "region": "아르테리아",
+      "name": "동쪽 외곽 지역",
+      "level": 281,
+      "monsterCount": 40,
+      "monsters": [
+        "하이레프 법사"
+      ],
+      "monsterExp": 3482914,
+      "totalExp": 139316560
+    },
+    {
+      "region": "아르테리아",
+      "name": "남쪽 외곽 지역",
+      "level": 281,
+      "monsterCount": 36,
+      "monsters": [
+        "하이레프 법사"
+      ],
+      "monsterExp": 3482914,
+      "totalExp": 125384904
+    },
+    {
+      "region": "아르테리아",
+      "name": "외곽 전투지역 1",
+      "level": 280,
+      "monsterCount": 40,
+      "monsters": [
+        "하이레프 정찰 드론",
+        "하이레프 보병"
+      ],
+      "monsterExp": 3436027,
+      "totalExp": 137441080
+    },
+    {
+      "region": "아르테리아",
+      "name": "외곽 전투지역 2",
+      "level": 281,
+      "monsterCount": 40,
+      "monsters": [
+        "하이레프 법사"
+      ],
+      "monsterExp": 3482914,
+      "totalExp": 139316560
+    },
+    {
+      "region": "아르테리아",
+      "name": "최하층 통로 1",
+      "level": 282,
+      "monsterCount": 36,
+      "monsters": [
+        "하이레프 기갑병"
+      ],
+      "monsterExp": 3524768,
+      "totalExp": 126891648
+    },
+    {
+      "region": "아르테리아",
+      "name": "최하층 통로 2",
+      "level": 282,
+      "monsterCount": 40,
+      "monsters": [
+        "하이레프 기갑병"
+      ],
+      "monsterExp": 3524768,
+      "totalExp": 140990720
+    },
+    {
+      "region": "아르테리아",
+      "name": "최하층 통로 3",
+      "level": 282,
+      "monsterCount": 40,
+      "monsters": [
+        "하이레프 기갑병"
+      ],
+      "monsterExp": 3524768,
+      "totalExp": 140990720
+    },
+    {
+      "region": "아르테리아",
+      "name": "최하층 통로 4",
+      "level": 283,
+      "monsterCount": 36,
+      "monsters": [
+        "하이레프 장검병"
+      ],
+      "monsterExp": 3572010,
+      "totalExp": 128592360
+    },
+    {
+      "region": "아르테리아",
+      "name": "최하층 통로 5",
+      "level": 283,
+      "monsterCount": 40,
+      "monsters": [
+        "하이레프 장검병"
+      ],
+      "monsterExp": 3572010,
+      "totalExp": 142880400
+    },
+    {
+      "region": "아르테리아",
+      "name": "최하층 통로 6",
+      "level": 283,
+      "monsterCount": 40,
+      "monsters": [
+        "하이레프 장검병"
+      ],
+      "monsterExp": 3572010,
+      "totalExp": 142880400
+    },
+    {
+      "region": "아르테리아",
+      "name": "최상층 통로 1",
+      "level": 284,
+      "monsterCount": 36,
+      "monsters": [
+        "얼어붙은 레프 보병",
+        "얼어붙은 레프 법사"
+      ],
+      "monsterExp": 3614278,
+      "totalExp": 130114008
+    },
+    {
+      "region": "아르테리아",
+      "name": "최상층 통로 2",
+      "level": 284,
+      "monsterCount": 40,
+      "monsters": [
+        "얼어붙은 레프 보병",
+        "얼어붙은 레프 법사"
+      ],
+      "monsterExp": 3614278,
+      "totalExp": 144571120
+    },
+    {
+      "region": "아르테리아",
+      "name": "최상층 통로 3",
+      "level": 284,
+      "monsterCount": 36,
+      "monsters": [
+        "얼어붙은 레프 보병",
+        "얼어붙은 레프 법사"
+      ],
+      "monsterExp": 3614278,
+      "totalExp": 130114008
+    },
+    {
+      "region": "아르테리아",
+      "name": "최상층 통로 4",
+      "level": 284,
+      "monsterCount": 40,
+      "monsters": [
+        "얼어붙은 레프 보병",
+        "얼어붙은 레프 법사"
+      ],
+      "monsterExp": 3614278,
+      "totalExp": 144571120
+    },
+    {
+      "region": "아르테리아",
+      "name": "최상층 통로 5",
+      "level": 284,
+      "monsterCount": 36,
+      "monsters": [
+        "얼어붙은 레프 보병",
+        "얼어붙은 레프 법사"
+      ],
+      "monsterExp": 3614278,
+      "totalExp": 130114008
+    },
+    {
+      "region": "아르테리아",
+      "name": "최상층 통로 6",
+      "level": 284,
+      "monsterCount": 40,
+      "monsters": [
+        "얼어붙은 레프 보병",
+        "얼어붙은 레프 법사"
+      ],
+      "monsterExp": 3614278,
+      "totalExp": 144571120
+    },
+    {
+      "region": "아르테리아",
+      "name": "최상층 통로 7",
+      "level": 284,
+      "monsterCount": 40,
+      "monsters": [
+        "얼어붙은 레프 보병",
+        "얼어붙은 레프 법사"
+      ],
+      "monsterExp": 3614278,
+      "totalExp": 144571120
+    },
+    {
+      "region": "아르테리아",
+      "name": "최상층 통로 8",
+      "level": 284,
+      "monsterCount": 40,
+      "monsters": [
+        "얼어붙은 레프 보병",
+        "얼어붙은 레프 법사"
+      ],
+      "monsterExp": 3614278,
+      "totalExp": 144571120
+    }
+  ]
+}

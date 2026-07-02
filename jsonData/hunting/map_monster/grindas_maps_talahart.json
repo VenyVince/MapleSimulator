@@ -1,0 +1,264 @@
+{
+  "region": "탈라하트",
+  "note": "totalExp = monsterExp * monsterCount (레벨차 배율 미적용, 캐릭터 레벨에 따라 시뮬레이터에서 별도 적용 필요). 반레벨(.5) 맵은 정수부 기준(floor)으로 몬스터를 매칭함.",
+  "maps": [
+    {
+      "region": "탈라하트",
+      "name": "재와 침묵의 땅 1",
+      "level": 290,
+      "monsterCount": 40,
+      "monsters": [
+        "길 잃은 사념",
+        "재를 먹는 사념"
+      ],
+      "monsterExp": 4793318,
+      "totalExp": 191732720
+    },
+    {
+      "region": "탈라하트",
+      "name": "재와 침묵의 땅 2",
+      "level": 290,
+      "monsterCount": 40,
+      "monsters": [
+        "길 잃은 사념",
+        "재를 먹는 사념"
+      ],
+      "monsterExp": 4793318,
+      "totalExp": 191732720
+    },
+    {
+      "region": "탈라하트",
+      "name": "재와 침묵의 땅 3",
+      "level": 290.5,
+      "monsterCount": 40,
+      "monsters": [
+        "길 잃은 사념",
+        "재를 먹는 사념"
+      ],
+      "monsterExp": 4793318,
+      "totalExp": 191732720
+    },
+    {
+      "region": "탈라하트",
+      "name": "재와 침묵의 땅 4",
+      "level": 291,
+      "monsterCount": 40,
+      "monsters": [
+        "침묵을 삼키는 사념",
+        "영혼 도살자"
+      ],
+      "monsterExp": 4847012,
+      "totalExp": 193880480
+    },
+    {
+      "region": "탈라하트",
+      "name": "재와 침묵의 땅 5",
+      "level": 291,
+      "monsterCount": 40,
+      "monsters": [
+        "침묵을 삼키는 사념",
+        "영혼 도살자"
+      ],
+      "monsterExp": 4847012,
+      "totalExp": 193880480
+    },
+    {
+      "region": "탈라하트",
+      "name": "섭리와 운명의 전쟁터 1",
+      "level": 291,
+      "monsterCount": 40,
+      "monsters": [
+        "침묵을 삼키는 사념",
+        "영혼 도살자"
+      ],
+      "monsterExp": 4847012,
+      "totalExp": 193880480
+    },
+    {
+      "region": "탈라하트",
+      "name": "섭리와 운명의 전쟁터 2",
+      "level": 291,
+      "monsterCount": 40,
+      "monsters": [
+        "침묵을 삼키는 사념",
+        "영혼 도살자"
+      ],
+      "monsterExp": 4847012,
+      "totalExp": 193880480
+    },
+    {
+      "region": "탈라하트",
+      "name": "섭리와 운명의 전쟁터 3",
+      "level": 291,
+      "monsterCount": 40,
+      "monsters": [
+        "침묵을 삼키는 사념",
+        "영혼 도살자"
+      ],
+      "monsterExp": 4847012,
+      "totalExp": 193880480
+    },
+    {
+      "region": "탈라하트",
+      "name": "심판과 운명의 전쟁터 1",
+      "level": 292,
+      "monsterCount": 40,
+      "monsters": [
+        "폭풍의 심판자"
+      ],
+      "monsterExp": 4907812,
+      "totalExp": 196312480
+    },
+    {
+      "region": "탈라하트",
+      "name": "심판과 운명의 전쟁터 2",
+      "level": 292,
+      "monsterCount": 40,
+      "monsters": [
+        "폭풍의 심판자"
+      ],
+      "monsterExp": 4907812,
+      "totalExp": 196312480
+    },
+    {
+      "region": "탈라하트",
+      "name": "심판과 운명의 전쟁터 3",
+      "level": 292,
+      "monsterCount": 40,
+      "monsters": [
+        "폭풍의 심판자"
+      ],
+      "monsterExp": 4907812,
+      "totalExp": 196312480
+    },
+    {
+      "region": "탈라하트",
+      "name": "영원과 운명의 전쟁터 1",
+      "level": 293,
+      "monsterCount": 40,
+      "monsters": [
+        "영원의 집행자"
+      ],
+      "monsterExp": 4968977,
+      "totalExp": 198759080
+    },
+    {
+      "region": "탈라하트",
+      "name": "영원과 운명의 전쟁터 2",
+      "level": 293,
+      "monsterCount": 40,
+      "monsters": [
+        "영원의 집행자"
+      ],
+      "monsterExp": 4968977,
+      "totalExp": 198759080
+    },
+    {
+      "region": "탈라하트",
+      "name": "영원과 운명의 전쟁터 3",
+      "level": 293,
+      "monsterCount": 40,
+      "monsters": [
+        "영원의 집행자"
+      ],
+      "monsterExp": 4968977,
+      "totalExp": 198759080
+    },
+    {
+      "region": "탈라하트",
+      "name": "밤의 길 1",
+      "level": 294,
+      "monsterCount": 40,
+      "monsters": [
+        "밤의 인도자",
+        "환영의 인도자"
+      ],
+      "monsterExp": 5023491,
+      "totalExp": 200939640
+    },
+    {
+      "region": "탈라하트",
+      "name": "밤의 길 2",
+      "level": 294,
+      "monsterCount": 40,
+      "monsters": [
+        "밤의 인도자",
+        "환영의 인도자"
+      ],
+      "monsterExp": 5023491,
+      "totalExp": 200939640
+    },
+    {
+      "region": "탈라하트",
+      "name": "밤의 길 3",
+      "level": 294,
+      "monsterCount": 40,
+      "monsters": [
+        "밤의 인도자",
+        "환영의 인도자"
+      ],
+      "monsterExp": 5023491,
+      "totalExp": 200939640
+    },
+    {
+      "region": "탈라하트",
+      "name": "밤의 길 4",
+      "level": 294,
+      "monsterCount": 40,
+      "monsters": [
+        "밤의 인도자",
+        "환영의 인도자"
+      ],
+      "monsterExp": 5023491,
+      "totalExp": 200939640
+    },
+    {
+      "region": "탈라하트",
+      "name": "환영의 길 1",
+      "level": 294,
+      "monsterCount": 40,
+      "monsters": [
+        "밤의 인도자",
+        "환영의 인도자"
+      ],
+      "monsterExp": 5023491,
+      "totalExp": 200939640
+    },
+    {
+      "region": "탈라하트",
+      "name": "환영의 길 2",
+      "level": 294,
+      "monsterCount": 40,
+      "monsters": [
+        "밤의 인도자",
+        "환영의 인도자"
+      ],
+      "monsterExp": 5023491,
+      "totalExp": 200939640
+    },
+    {
+      "region": "탈라하트",
+      "name": "환영의 길 3",
+      "level": 294,
+      "monsterCount": 40,
+      "monsters": [
+        "밤의 인도자",
+        "환영의 인도자"
+      ],
+      "monsterExp": 5023491,
+      "totalExp": 200939640
+    },
+    {
+      "region": "탈라하트",
+      "name": "환영의 길 4",
+      "level": 294,
+      "monsterCount": 40,
+      "monsters": [
+        "밤의 인도자",
+        "환영의 인도자"
+      ],
+      "monsterExp": 5023491,
+      "totalExp": 200939640
+    }
+  ]
+}

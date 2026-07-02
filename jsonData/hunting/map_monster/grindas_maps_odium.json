@@ -1,0 +1,213 @@
+{
+  "region": "오디움",
+  "note": "totalExp = monsterExp * monsterCount (레벨차 배율 미적용, 캐릭터 레벨에 따라 시뮬레이터에서 별도 적용 필요). 반레벨(.5) 맵은 정수부 기준(floor)으로 몬스터를 매칭함.",
+  "maps": [
+    {
+      "region": "오디움",
+      "name": "성문으로 가는 길 1",
+      "level": 270,
+      "monsterCount": 34,
+      "monsters": [
+        "오디움의 척후병",
+        "망가진 오디움의 척후병",
+        "강화형 파수꾼 산호",
+        "감람",
+        "금강"
+      ],
+      "monsterExp": 2445217,
+      "totalExp": 83137378
+    },
+    {
+      "region": "오디움",
+      "name": "성문으로 가는 길 2",
+      "level": 270,
+      "monsterCount": 34,
+      "monsters": [
+        "오디움의 척후병",
+        "망가진 오디움의 척후병",
+        "강화형 파수꾼 산호",
+        "감람",
+        "금강"
+      ],
+      "monsterExp": 2445217,
+      "totalExp": 83137378
+    },
+    {
+      "region": "오디움",
+      "name": "성문으로 가는 길 3",
+      "level": 270,
+      "monsterCount": 37,
+      "monsters": [
+        "오디움의 척후병",
+        "망가진 오디움의 척후병",
+        "강화형 파수꾼 산호",
+        "감람",
+        "금강"
+      ],
+      "monsterExp": 2445217,
+      "totalExp": 90473029
+    },
+    {
+      "region": "오디움",
+      "name": "성문으로 가는 길 4",
+      "level": 270,
+      "monsterCount": 39,
+      "monsters": [
+        "오디움의 척후병",
+        "망가진 오디움의 척후병",
+        "강화형 파수꾼 산호",
+        "감람",
+        "금강"
+      ],
+      "monsterExp": 2445217,
+      "totalExp": 95363463
+    },
+    {
+      "region": "오디움",
+      "name": "성문으로 가는 길 5",
+      "level": 270,
+      "monsterCount": 39,
+      "monsters": [
+        "오디움의 척후병",
+        "망가진 오디움의 척후병",
+        "강화형 파수꾼 산호",
+        "감람",
+        "금강"
+      ],
+      "monsterExp": 2445217,
+      "totalExp": 95363463
+    },
+    {
+      "region": "오디움",
+      "name": "점령당한 골목 1",
+      "level": 271,
+      "monsterCount": 34,
+      "monsters": [
+        "앵글러 포격형 시험기",
+        "근접형 시험기",
+        "전자전 시험기"
+      ],
+      "monsterExp": 2481337,
+      "totalExp": 84365458
+    },
+    {
+      "region": "오디움",
+      "name": "점령당한 골목 2",
+      "level": 271,
+      "monsterCount": 34,
+      "monsters": [
+        "앵글러 포격형 시험기",
+        "근접형 시험기",
+        "전자전 시험기"
+      ],
+      "monsterExp": 2481337,
+      "totalExp": 84365458
+    },
+    {
+      "region": "오디움",
+      "name": "점령당한 골목 3",
+      "level": 271,
+      "monsterCount": 39,
+      "monsters": [
+        "앵글러 포격형 시험기",
+        "근접형 시험기",
+        "전자전 시험기"
+      ],
+      "monsterExp": 2481337,
+      "totalExp": 96772143
+    },
+    {
+      "region": "오디움",
+      "name": "점령당한 골목 4",
+      "level": 271,
+      "monsterCount": 39,
+      "monsters": [
+        "앵글러 포격형 시험기",
+        "근접형 시험기",
+        "전자전 시험기"
+      ],
+      "monsterExp": 2481337,
+      "totalExp": 96772143
+    },
+    {
+      "region": "오디움",
+      "name": "볕 드는 실험실 1",
+      "level": 272,
+      "monsterCount": 34,
+      "monsters": [
+        "경비병 강옥",
+        "경비병 마노"
+      ],
+      "monsterExp": 2513634,
+      "totalExp": 85463556
+    },
+    {
+      "region": "오디움",
+      "name": "볕 드는 실험실 2",
+      "level": 272,
+      "monsterCount": 39,
+      "monsters": [
+        "경비병 강옥",
+        "경비병 마노"
+      ],
+      "monsterExp": 2513634,
+      "totalExp": 98031726
+    },
+    {
+      "region": "오디움",
+      "name": "볕 드는 실험실 3",
+      "level": 272,
+      "monsterCount": 39,
+      "monsters": [
+        "경비병 강옥",
+        "경비병 마노"
+      ],
+      "monsterExp": 2513634,
+      "totalExp": 98031726
+    },
+    {
+      "region": "오디움",
+      "name": "잠긴 문 뒤 실험실 1",
+      "level": 273,
+      "monsterCount": 34,
+      "monsters": [
+        "무너지는 실험체"
+      ],
+      "monsterExp": 2546149,
+      "totalExp": 86569066
+    },
+    {
+      "region": "오디움",
+      "name": "잠긴 문 뒤 실험실 2",
+      "level": 273.5,
+      "monsterCount": 39,
+      "monsters": [
+        "무너지는 실험체"
+      ],
+      "monsterExp": 2546149,
+      "totalExp": 99299811
+    },
+    {
+      "region": "오디움",
+      "name": "잠긴 문 뒤 실험실 3",
+      "level": 274,
+      "monsterCount": 39,
+      "monsters": [
+        "실패한 피험체"
+      ],
+      "monsterExp": 2582906,
+      "totalExp": 100733334
+    },
+    {
+      "region": "오디움",
+      "name": "잠긴 문 뒤 실험실 4",
+      "level": 274,
+      "monsterCount": 39,
+      "monsters": [
+        "실패한 피험체"
+      ],
+      "monsterExp": 2582906,
+      "totalExp": 100733334
+    }
+  ]
+}

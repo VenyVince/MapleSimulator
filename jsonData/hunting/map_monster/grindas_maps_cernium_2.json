@@ -1,0 +1,198 @@
+{
+  "region": "세르니움(후)",
+  "note": "totalExp = monsterExp * monsterCount (레벨차 배율 미적용, 캐릭터 레벨에 따라 시뮬레이터에서 별도 적용 필요). 반레벨(.5) 맵은 정수부 기준(floor)으로 몬스터를 매칭함.",
+  "maps": [
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 서쪽 성벽 1",
+      "level": 262,
+      "monsterCount": 34,
+      "monsters": [
+        "레프 보병",
+        "레프 법사"
+      ],
+      "monsterExp": 1775159,
+      "totalExp": 60355406
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 서쪽 성벽 2",
+      "level": 262,
+      "monsterCount": 34,
+      "monsters": [
+        "레프 보병",
+        "레프 법사"
+      ],
+      "monsterExp": 1775159,
+      "totalExp": 60355406
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 서쪽 성벽 3",
+      "level": 262,
+      "monsterCount": 38,
+      "monsters": [
+        "레프 보병",
+        "레프 법사"
+      ],
+      "monsterExp": 1775159,
+      "totalExp": 67456042
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 서쪽 성벽 4",
+      "level": 262,
+      "monsterCount": 38,
+      "monsters": [
+        "레프 보병",
+        "레프 법사"
+      ],
+      "monsterExp": 1775159,
+      "totalExp": 67456042
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 동쪽 성벽 1",
+      "level": 263,
+      "monsterCount": 34,
+      "monsters": [
+        "레프 암살자",
+        "레프 기갑병"
+      ],
+      "monsterExp": 1800203,
+      "totalExp": 61206902
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 동쪽 성벽 2",
+      "level": 263,
+      "monsterCount": 34,
+      "monsters": [
+        "레프 암살자",
+        "레프 기갑병"
+      ],
+      "monsterExp": 1800203,
+      "totalExp": 61206902
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 동쪽 성벽 3",
+      "level": 263,
+      "monsterCount": 39,
+      "monsters": [
+        "레프 암살자",
+        "레프 기갑병"
+      ],
+      "monsterExp": 1800203,
+      "totalExp": 70207917
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 동쪽 성벽 4",
+      "level": 263,
+      "monsterCount": 34,
+      "monsters": [
+        "레프 암살자",
+        "레프 기갑병"
+      ],
+      "monsterExp": 1800203,
+      "totalExp": 61206902
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 동쪽 성벽 5",
+      "level": 263,
+      "monsterCount": 34,
+      "monsters": [
+        "레프 암살자",
+        "레프 기갑병"
+      ],
+      "monsterExp": 1800203,
+      "totalExp": 61206902
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "격전의 동쪽 성벽 6",
+      "level": 263,
+      "monsterCount": 38,
+      "monsters": [
+        "레프 암살자",
+        "레프 기갑병"
+      ],
+      "monsterExp": 1800203,
+      "totalExp": 68407714
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "불타는 왕립 도서관 제 1구역",
+      "level": 264,
+      "monsterCount": 34,
+      "monsters": [
+        "흑태양 폭탄병",
+        "흑태양 법사"
+      ],
+      "monsterExp": 1828409,
+      "totalExp": 62165906
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "불타는 왕립 도서관 제 2구역",
+      "level": 264,
+      "monsterCount": 34,
+      "monsters": [
+        "흑태양 폭탄병",
+        "흑태양 법사"
+      ],
+      "monsterExp": 1828409,
+      "totalExp": 62165906
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "불타는 왕립 도서관 제 3구역",
+      "level": 264,
+      "monsterCount": 39,
+      "monsters": [
+        "흑태양 폭탄병",
+        "흑태양 법사"
+      ],
+      "monsterExp": 1828409,
+      "totalExp": 71307951
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "불타는 왕립 도서관 제 4구역",
+      "level": 264,
+      "monsterCount": 34,
+      "monsters": [
+        "흑태양 폭탄병",
+        "흑태양 법사"
+      ],
+      "monsterExp": 1828409,
+      "totalExp": 62165906
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "불타는 왕립 도서관 제 5구역",
+      "level": 264,
+      "monsterCount": 34,
+      "monsters": [
+        "흑태양 폭탄병",
+        "흑태양 법사"
+      ],
+      "monsterExp": 1828409,
+      "totalExp": 62165906
+    },
+    {
+      "region": "세르니움(후)",
+      "name": "불타는 왕립 도서관 제 6구역",
+      "level": 264,
+      "monsterCount": 39,
+      "monsters": [
+        "흑태양 폭탄병",
+        "흑태양 법사"
+      ],
+      "monsterExp": 1828409,
+      "totalExp": 71307951
+    }
+  ]
+}

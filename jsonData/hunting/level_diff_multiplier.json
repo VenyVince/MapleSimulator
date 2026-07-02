@@ -1,0 +1,90 @@
+{
+  "note": "캐릭터 레벨 - 몬스터 레벨 기준 경험치 배율표",
+  "levelDiffMultiplier": [
+    {
+      "range": "40 이상",
+      "multiplier": 0.7,
+      "note": null
+    },
+    {
+      "range": "39 ~ 21",
+      "multiplier": "0.7 ~ 0.89",
+      "note": "레벨 1당 0.01씩 증가"
+    },
+    {
+      "range": "20 ~ 19",
+      "multiplier": 0.95,
+      "note": null
+    },
+    {
+      "range": "18 ~ 17",
+      "multiplier": 0.96,
+      "note": null
+    },
+    {
+      "range": "16 ~ 15",
+      "multiplier": 0.97,
+      "note": null
+    },
+    {
+      "range": "14 ~ 13",
+      "multiplier": 0.98,
+      "note": null
+    },
+    {
+      "range": "12 ~ 11",
+      "multiplier": 0.99,
+      "note": null
+    },
+    {
+      "range": "10",
+      "multiplier": 1,
+      "note": null
+    },
+    {
+      "range": "9 ~ 5",
+      "multiplier": 1.05,
+      "note": null
+    },
+    {
+      "range": "4 ~ 2",
+      "multiplier": 1.1,
+      "note": null
+    },
+    {
+      "range": "1 ~ -1",
+      "multiplier": 1.2,
+      "note": "최대 배율"
+    },
+    {
+      "range": "-2 ~ -4",
+      "multiplier": 1.1,
+      "note": null
+    },
+    {
+      "range": "-5 ~ -9",
+      "multiplier": 1.05,
+      "note": null
+    },
+    {
+      "range": "-10 ~ -20",
+      "multiplier": "1.00 ~ 0.90",
+      "note": "레벨 1당 0.01씩 감소"
+    },
+    {
+      "range": "-21 ~ -35",
+      "multiplier": "0.70 ~ 0.14",
+      "note": "레벨 1당 0.04씩 감소"
+    },
+    {
+      "range": "-36 이하",
+      "multiplier": 0.01,
+      "note": null
+    },
+    {
+      "range": "-40 이하",
+      "multiplier": "최대 100",
+      "note": "몬스터에게 1의 피해만 입힘"
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "region": "호텔 아르크스",
+  "note": "totalExp = monsterExp * monsterCount (레벨차 배율 미적용, 캐릭터 레벨에 따라 시뮬레이터에서 별도 적용 필요). 반레벨(.5) 맵은 정수부 기준(floor)으로 몬스터를 매칭함.",
+  "maps": [
+    {
+      "region": "호텔 아르크스",
+      "name": "무법자들이 지배하는 황야 1",
+      "level": 265,
+      "monsterCount": 34,
+      "monsters": [
+        "스톤키위",
+        "모래칼날 약탈꾼",
+        "무쇠탄환 학살꾼"
+      ],
+      "monsterExp": 2056974,
+      "totalExp": 69937116
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "무법자들이 지배하는 황야 2",
+      "level": 265,
+      "monsterCount": 34,
+      "monsters": [
+        "스톤키위",
+        "모래칼날 약탈꾼",
+        "무쇠탄환 학살꾼"
+      ],
+      "monsterExp": 2056974,
+      "totalExp": 69937116
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "무법자들이 지배하는 황야 3",
+      "level": 265,
+      "monsterCount": 38,
+      "monsters": [
+        "스톤키위",
+        "모래칼날 약탈꾼",
+        "무쇠탄환 학살꾼"
+      ],
+      "monsterExp": 2056974,
+      "totalExp": 78165012
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "무법자들이 지배하는 황야 4",
+      "level": 265,
+      "monsterCount": 39,
+      "monsters": [
+        "스톤키위",
+        "모래칼날 약탈꾼",
+        "무쇠탄환 학살꾼"
+      ],
+      "monsterExp": 2056974,
+      "totalExp": 80221986
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "낭만이 저무는 자동차 극장 1",
+      "level": 266,
+      "monsterCount": 34,
+      "monsters": [
+        "탐색하는 폭실리언"
+      ],
+      "monsterExp": 2085219,
+      "totalExp": 70897446
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "낭만이 저무는 자동차 극장 2",
+      "level": 266,
+      "monsterCount": 34,
+      "monsters": [
+        "탐색하는 폭실리언"
+      ],
+      "monsterExp": 2085219,
+      "totalExp": 70897446
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "낭만이 저무는 자동차 극장 3",
+      "level": 266,
+      "monsterCount": 39,
+      "monsters": [
+        "탐색하는 폭실리언"
+      ],
+      "monsterExp": 2085219,
+      "totalExp": 81323541
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "낭만이 저무는 자동차 극장 4",
+      "level": 267,
+      "monsterCount": 34,
+      "monsters": [
+        "고물수집가 폭실리언"
+      ],
+      "monsterExp": 2113572,
+      "totalExp": 71861448
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "낭만이 저무는 자동차 극장 5",
+      "level": 267,
+      "monsterCount": 33,
+      "monsters": [
+        "고물수집가 폭실리언"
+      ],
+      "monsterExp": 2113572,
+      "totalExp": 69747876
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "낭만이 저무는 자동차 극장 6",
+      "level": 267,
+      "monsterCount": 34,
+      "monsters": [
+        "고물수집가 폭실리언"
+      ],
+      "monsterExp": 2113572,
+      "totalExp": 71861448
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "종착지 없는 횡단열차 1",
+      "level": 268,
+      "monsterCount": 34,
+      "monsters": [
+        "엄격한 역무원"
+      ],
+      "monsterExp": 2145596,
+      "totalExp": 72950264
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "종착지 없는 횡단열차 2",
+      "level": 268,
+      "monsterCount": 34,
+      "monsters": [
+        "엄격한 역무원"
+      ],
+      "monsterExp": 2145596,
+      "totalExp": 72950264
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "종착지 없는 횡단열차 3",
+      "level": 268,
+      "monsterCount": 38,
+      "monsters": [
+        "엄격한 역무원"
+      ],
+      "monsterExp": 2145596,
+      "totalExp": 81532648
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "종착지 없는 횡단열차 4",
+      "level": 269,
+      "monsterCount": 34,
+      "monsters": [
+        "주인잃은 왓치독"
+      ],
+      "monsterExp": 2174274,
+      "totalExp": 73925316
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "종착지 없는 횡단열차 5",
+      "level": 269,
+      "monsterCount": 34,
+      "monsters": [
+        "주인잃은 왓치독"
+      ],
+      "monsterExp": 2174274,
+      "totalExp": 73925316
+    },
+    {
+      "region": "호텔 아르크스",
+      "name": "종착지 없는 횡단열차 6",
+      "level": 269,
+      "monsterCount": 38,
+      "monsters": [
+        "주인잃은 왓치독"
+      ],
+      "monsterExp": 2174274,
+      "totalExp": 82622412
+    }
+  ]
+}
