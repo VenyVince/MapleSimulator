@@ -8,7 +8,7 @@
 ### 목적
 사용자가 현재 캐릭터의 레벨과 경험치, 반복적으로 수행하는 일간/주간 루틴을 설정하면 특정 날짜까지 달성 가능한 레벨과 경험치를 시뮬레이션하여 제공하는 서비스.
 
----
+
 
 ## 2. MVP 목표
 
@@ -32,7 +32,7 @@
 - 이벤트 시스템
 - 관리자 기능
 
----
+
 
 ## 3. 주요 기능
 
@@ -46,7 +46,7 @@
 - 현재 경험치 (퍼센트 또는 절대값)
 - 적용 중인 버닝 이벤트
 
----
+
 
 ### 3.2 일간 루틴
 
@@ -56,7 +56,7 @@
 - 몬스터파크
 - 일일 퀘스트
 
----
+
 
 ### 3.3 주간 루틴
 
@@ -65,7 +65,7 @@
 - 에픽던전
 - 익스트림 몬스터파크
 
----
+
 
 ### 3.4 이벤트 재화
 
@@ -76,7 +76,7 @@
 - 베리류 티켓
 - 기타 경험치 재화
 
----
+
 
 ## 4. 사냥 설정
 
@@ -111,7 +111,7 @@
 × 사냥 시간
 ```
 
----
+
 
 ## 5. 시뮬레이션
 
@@ -137,7 +137,7 @@
 - 날짜별 경험치
 - 누적 획득 경험치
 
----
+
 
 ## 6. 메인 화면
 
@@ -181,7 +181,7 @@
   - 퍼센트
   - 절대 경험치
 
----
+
 
 ## 7. 게임 데이터
 
@@ -198,7 +198,7 @@ JSON으로 관리한다.
 - 베리류 티켓
 - 도핑 데이터
 
----
+
 
 ## 8. 기술 스택
 
@@ -213,7 +213,7 @@ JSON으로 관리한다.
 - NestJS
 - PostgreSQL
 
----
+
 
 ## 9. V2 예정 기능
 
@@ -226,7 +226,7 @@ JSON으로 관리한다.
 - 통계 기능
 - 시뮬레이션 기록 관리
 
----
+
 
 ## 10. 개발 우선순위
 
@@ -254,3 +254,74 @@ JSON으로 관리한다.
 - PostgreSQL 연동
 - OAuth 로그인
 - 캐릭터 및 루틴 관리
+
+
+## 실질 구현 설계
+
+1. SimulationContext
+- 현재 시뮬레이션의 상태를 모두 가짐
+2. DailySimulationService
+- 하루 루틴 처리 서비스(호출만 - 직접 계산 X - )
+3. HuntingService
+- 사냥 처리 서비스
+- 입력: 사냥터, 현재 레벨 및 경험치, 시간, 도핑, 마릿수
+- 출력: 사냥 경험치 합계
+4. ContentService
+- 컨텐츠 계산 전담(몬파, 일퀘, 익몬, 에픽던전)
+5. ItemService
+- 아이템 처리(성장의 비약, EXP쿠폰, 베리티켓)
+6. ExpService
+- 순수 경험치 계산(절대값 및 퍼센트 변환 및 현재 경험치 + 얻을 경험치)
+7. LevelService
+- 레벨업 처리 (버닝또한 여기서 처리(현재 경험치 확인 -> 필요 경험치 이상인지 확인 -> 레벨 증가 -> 남은 경험치 계산 -> 반복)
+8. ResultBuilder
+- 결과 생성(date, level, expPrecent, gainedExp)
+
+## 실행 흐름
+
+``` text
+SimulationEngine
+
+→ Context 생성
+
+→ while (date <= end)
+
+    → DailySimulationService
+
+        → ContentService
+        → HuntingService
+        → ItemService
+
+    → LevelService
+
+    → ResultBuilder
+
+    → nextDay 
+```
+
+
+## 구현 흐름
+
+``` text
+1순위: ExpService 구현
+addExp
+percent ↔ absolute 변환
+overflow 처리 기준
+
+2순위: LevelService 구현
+레벨업 루프
+버닝 처리
+필요 exp lookup
+
+3순위: HuntingService
+사냥 공식 고정
+
+4순위: “하루 Tick” 구현
+DailySimulationService
+실제 시뮬레이션 흐름 연결
+
+5순위: Engine 연결
+while loop
+Context 생성
+결과 누적
+```
