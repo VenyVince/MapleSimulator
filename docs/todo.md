@@ -142,22 +142,37 @@ Done when:
 - Engine does not directly calculate exp.
 - Same input returns the same result.
 
-## Phase 11. UI Integration
+## Phase 11.0. UI Skeleton
 
-- [ ] Replace Nuxt welcome screen with simulator UI.
-- [ ] Establish an Apple-inspired visual direction: clean layout, generous whitespace, soft neutral surfaces, precise typography, subtle depth, and restrained accent color.
-- [ ] Add initial character input.
-- [ ] Add daily routine input.
-- [ ] Add weekly routine date selection.
-- [ ] Add item usage by date.
-- [ ] Display daily simulation results.
+- [x] Replace Nuxt welcome screen with simulator UI shell.
+- [x] Establish an Apple-inspired visual direction: clean layout, generous whitespace, soft neutral surfaces, precise typography, subtle depth, and restrained accent color.
+- [x] Add static initial character input section.
+- [x] Add static daily routine section.
+- [x] Add static weekly and item planning section.
+- [x] Add static simulation result preview section.
+
+Done when:
+
+- Browser shows the simulator workflow instead of the Nuxt welcome screen.
+- UI layout is responsive across desktop and mobile.
+- UI feels Apple-like: calm, minimal, polished, readable, and focused on the simulator workflow rather than decorative clutter.
+- No engine integration is required yet.
+
+## Phase 11.5. UI Integration
+
+- [ ] Wire initial character input to reactive state.
+- [ ] Wire daily routine input to reactive state.
+- [ ] Wire weekly routine date selection to reactive state.
+- [ ] Wire item usage by date to reactive state.
+- [ ] Build a typed `SimulationInput` from UI state.
+- [ ] Run `SimulationEngine` from the browser.
+- [ ] Display real daily simulation results.
 
 Done when:
 
 - User can run a basic simulation from the browser.
 - UI calls the engine through a typed input object.
 - Result display uses `SimulationResult`.
-- UI feels Apple-like: calm, minimal, polished, readable, and focused on the simulator workflow rather than decorative clutter.
 
 ## Phase 12. Verification
 
