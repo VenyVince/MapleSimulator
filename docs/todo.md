@@ -86,10 +86,10 @@ Done when:
 
 ## Phase 7. ItemService
 
-- [ ] Implement growth potion exp calculation.
-- [ ] Implement EXP coupon exp calculation.
-- [ ] Implement berry ticket exp calculation.
-- [ ] Support future item types without changing the daily flow.
+- [x] Implement growth potion exp calculation.
+- [x] Implement EXP coupon exp calculation.
+- [x] Implement berry ticket exp calculation.
+- [x] Support future item types without changing the daily flow.
 
 Done when:
 
