@@ -129,12 +129,12 @@ Done when:
 
 ## Phase 10. SimulationEngine
 
-- [ ] Create SimulationContext from input.
-- [ ] Loop from start date to end date.
-- [ ] Call DailySimulationService for each day.
-- [ ] Call ResultBuilder after each day.
-- [ ] Advance date.
-- [ ] Stop at the end condition.
+- [x] Create SimulationContext from input.
+- [x] Loop from start date to end date.
+- [x] Call DailySimulationService for each day.
+- [x] Call ResultBuilder after each day.
+- [x] Advance date.
+- [x] Stop at the end condition.
 
 Done when:
 
