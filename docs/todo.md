@@ -99,15 +99,15 @@ Done when:
 
 ## Phase 8. DailySimulationService
 
-- [ ] Identify routines for the current date.
-- [ ] Call ContentService.
-- [ ] Call HuntingService.
-- [ ] Call ItemService.
-- [ ] Sum all gained exp for the day.
-- [ ] Call ExpService.
-- [ ] Call LevelService.
-- [ ] Update SimulationContext.
-- [ ] Return daily calculation data for ResultBuilder.
+- [x] Identify routines for the current date.
+- [x] Call ContentService.
+- [x] Call HuntingService.
+- [x] Call ItemService.
+- [x] Sum all gained exp for the day.
+- [x] Call ExpService.
+- [x] Call LevelService.
+- [x] Update SimulationContext.
+- [x] Return daily calculation data for ResultBuilder.
 
 Done when:
 
@@ -117,9 +117,9 @@ Done when:
 
 ## Phase 9. ResultBuilder
 
-- [ ] Build daily UI result snapshots.
-- [ ] Include date, level, current exp, required exp, exp percent, gained exp, and total gained exp.
-- [ ] Keep formatting logic separate from calculation logic.
+- [x] Build daily UI result snapshots.
+- [x] Include date, level, current exp, required exp, exp percent, gained exp, and total gained exp.
+- [x] Keep formatting logic separate from calculation logic.
 
 Done when:
 
@@ -145,6 +145,7 @@ Done when:
 ## Phase 11. UI Integration
 
 - [ ] Replace Nuxt welcome screen with simulator UI.
+- [ ] Establish an Apple-inspired visual direction: clean layout, generous whitespace, soft neutral surfaces, precise typography, subtle depth, and restrained accent color.
 - [ ] Add initial character input.
 - [ ] Add daily routine input.
 - [ ] Add weekly routine date selection.
@@ -156,6 +157,7 @@ Done when:
 - User can run a basic simulation from the browser.
 - UI calls the engine through a typed input object.
 - Result display uses `SimulationResult`.
+- UI feels Apple-like: calm, minimal, polished, readable, and focused on the simulator workflow rather than decorative clutter.
 
 ## Phase 12. Verification
 

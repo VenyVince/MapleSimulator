@@ -1,3 +1,11 @@
+import type { DailySimulationResult } from "../types/simulation";
+import { SimulationContext } from "./SimulationContext";
+import { ContentService } from "./services/ContentService";
+import { ExpService } from "./services/ExpService";
+import { HuntingService } from "./services/HuntingService";
+import { ItemService } from "./services/ItemService";
+import { LevelService } from "./services/LevelService";
+
 // 역할: 하루 시뮬레이션 오케스트레이터
 /*
 해야 할 일
@@ -24,3 +32,65 @@ FLOW:
 6. LevelService.apply(...)로 레벨업 처리
 7. SimulationContext 갱신 후 하루 결과 반환
 */
+
+export class DailySimulationService {
+  constructor(
+    private readonly contentService: ContentService,
+    private readonly huntingService: HuntingService,
+    private readonly itemService: ItemService,
+    private readonly expService: ExpService,
+    private readonly levelService: LevelService,
+  ) {}
+
+  run(context: SimulationContext): DailySimulationResult {
+    const date = context.currentDate;
+    const beforeLevel = context.currentLevel;
+    const beforeExp = context.currentExp;
+    const input = context.input;
+    const dailyRoutine = input.dailyRoutine;
+    const items = input.itemUsageByDate[date] ?? [];
+
+    const content = this.contentService.calculate({
+      currentLevel: beforeLevel,
+      date,
+      dailyRoutine,
+      weeklyRoutineSelections: input.weeklyRoutineSelections,
+    });
+    const huntingExp = this.huntingService.calculate({
+      currentLevel: beforeLevel,
+      routine: dailyRoutine.hunting,
+    });
+    const item = this.itemService.calculate({
+      currentLevel: beforeLevel,
+      currentExp: beforeExp,
+      items,
+    });
+
+    const gains = {
+      contentExp: content.totalExp,
+      huntingExp,
+      itemExp: item.totalExp,
+      totalExp: content.totalExp + huntingExp + item.totalExp,
+    };
+    const expAfterGain = this.expService.addExp(beforeExp, gains.totalExp);
+    const levelResult = this.levelService.apply({
+      level: beforeLevel,
+      exp: expAfterGain,
+      burningOption: input.burningOption,
+      maxLevel: context.options.maxLevel,
+    });
+
+    context.currentLevel = levelResult.level;
+    context.currentExp = levelResult.exp;
+    context.totalGainedExp += gains.totalExp;
+
+    return {
+      date,
+      beforeLevel,
+      beforeExp,
+      afterLevel: context.currentLevel,
+      afterExp: context.currentExp,
+      gains,
+    };
+  }
+}
