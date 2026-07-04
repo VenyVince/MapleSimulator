@@ -19,5 +19,8 @@ TYPES:
 
 RULE:
 - routine.json 기반 실행
-- expService로 계산
+- 컨텐츠 경험치만 계산하고 레벨업은 처리하지 않는다.
+
+OUTPUT:
+- 획득 경험치
  */

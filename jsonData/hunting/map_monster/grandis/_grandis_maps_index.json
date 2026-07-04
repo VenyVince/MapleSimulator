@@ -1,0 +1,37 @@
+{
+  "note": "totalExp = monsterExp * monsterCount (레벨차 배율 미적용, 캐릭터 레벨에 따라 시뮬레이터에서 별도 적용 필요). 반레벨(.5) 맵은 정수부 기준(floor)으로 몬스터를 매칭함.",
+  "regions": {
+    "cernium_pre": {
+      "file": "grandis_maps_cernium_pre.json",
+      "count": 16
+    },
+    "cernium_after": {
+      "file": "grandis_maps_cernium_after.json",
+      "count": 16
+    },
+    "hotel_arcus": {
+      "file": "grandis_maps_hotel_arcus.json",
+      "count": 16
+    },
+    "odium": {
+      "file": "grandis_maps_odium.json",
+      "count": 16
+    },
+    "dowonkyung": {
+      "file": "grandis_maps_dowonkyung.json",
+      "count": 20
+    },
+    "arteria": {
+      "file": "grandis_maps_arteria.json",
+      "count": 20
+    },
+    "talahart": {
+      "file": "grandis_maps_talahart.json",
+      "count": 22
+    },
+    "geardrak": {
+      "file": "grandis_maps_geardrak.json",
+      "count": 14
+    }
+  }
+}

@@ -1,21 +1,23 @@
-// 역할 : 시뮬레이션 전체 흐름 제어
-/* 해야할 일
- - SimulationContext 생성
- - 날짜 루프 실행(while)
- - DailySimulationSerivce 호출
- - 결과 수집
- - 종료 조건 판단(날짜)
- */
-/* 
-- 시뮬레이션 전체 실행 엔진
-- 하루 단위로 루프 실행
-- 각 Service는 직접 호출하지 않고 DailySimulationService 통해 실행
+// 역할: 시뮬레이션 시작점
+/*
+해야 할 일
+- SimulationContext 생성
+- 날짜 루프 실행
+- DailySimulationService 호출
+- ResultBuilder 호출
+- 날짜 증가
+- 종료 조건 확인
+*/
+/*
+RULE:
+- "언제 하루를 실행할지"만 안다.
+- 계산은 하지 않는다.
+- 하루 진행 방식은 DailySimulationService에 위임한다.
 
 FLOW:
 1. context 생성
-2. while (날짜 <= 종료일)
+2. while (종료 조건 전까지)
 3. DailySimulationService.run(context)
-4. LevelService 적용 결과 반영
-5. ResultBuilder로 결과 저장
-6. date +1
- */
+4. ResultBuilder로 UI 결과 생성
+5. date +1
+*/

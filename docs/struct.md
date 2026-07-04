@@ -1,43 +1,274 @@
+# Simulation Engine 구조
 
-## 1. 실질 구현 설계
+## 1. 최종 아키텍처
 
-1. SimulationContext
-- 현재 시뮬레이션의 상태를 모두 가짐
-- 현재 날짜, 현재 레벨, 현재 절대 경험치, 누적 획득 경험치, 일간/주간 루틴, 날짜별 아이템 사용 계획을 가진다.
-- 경험치는 퍼센트가 아니라 절대값을 기준으로 보관한다.
-2. DailySimulationService
-- 하루 루틴 처리 서비스(호출만 - 직접 계산 X - )
-- 현재 날짜에 실행할 일간 루틴, 선택된 주간 루틴, 선택된 아이템 사용 계획을 각 서비스에 위임한다.
-3. HuntingService
-- 사냥 처리 서비스
-- 입력: 사냥터, 현재 레벨 및 경험치, 시간, 도핑, 마릿수
-- 출력: 사냥 경험치 합계
-- 사냥 루틴은 단일 사냥터만 지원한다.
-- 사냥 루틴은 매일 반복한다.
-- 도핑은 사냥 루틴에만 포함되며 사냥 경험치에만 적용한다.
-4. ContentService
-- 컨텐츠 계산 전담(몬파, 일퀘, 익몬, 에픽던전)
-- 몬스터파크, 일일 퀘스트, 익스트림 몬스터파크, 에픽던전을 처리한다.
-- 각 컨텐츠는 기본 경험치에 비례한 이벤트 추가 경험치 입력값을 받을 수 있다.
-- 주간 컨텐츠는 사용자가 선택한 날짜에만 계산한다.
-5. ItemService
-- 아이템 처리(성장의 비약, EXP쿠폰, 베리티켓)
-- 아이템은 사용자가 설정한 날짜에만 계산한다.
-- 성장의 비약은 `jsonData/other/growth_potion_delta.json`의 현재 레벨 기준 경험치 획득량을 사용한다.
-6. ExpService
-- 순수 경험치 계산(절대값 및 퍼센트 변환 및 현재 경험치 + 얻을 경험치)
-- 경험치 100% 초과 입력은 잘못된 입력으로 처리하고, 내부값은 해당 레벨 필요 경험치 - 1로 보정한다.
-- 경험치 100% 초과 입력의 화면 표기는 99.9%로 처리한다.
-7. LevelService
-- 레벨업 처리 (버닝또한 여기서 처리(현재 경험치 확인 -> 필요 경험치 이상인지 확인 -> 레벨 증가 -> 남은 경험치 계산 -> 반복)
-- 레벨업 후 남는 경험치는 다음 레벨로 이월한다.
-- 버닝으로 여러 레벨업이 발생해도 잔여 경험치는 최종 레벨로 이월한다.
-- 사냥, 컨텐츠, 아이템으로 얻은 경험치는 모두 레벨업 이전 절대 경험치에 더한 뒤 레벨업을 처리한다.
-8. ResultBuilder
-- 결과 생성(date, level, expPrecent, gainedExp)
-- 결과 생성(date, level, expPercent, currentExp, requiredExp, gainedExp, totalGainedExp)
+```text
+SimulationEngine
+        │
+        ▼
+DailySimulationService
+        │
+        ├── HuntingService
+        ├── ContentService
+        ├── ItemService
+        ├── ExpService
+        ├── LevelService
+        └── ResultBuilder
+                │
+                ▼
+        SimulationContext
+```
 
-## 2. 입력 모델
+## 2. 핵심 원칙
+
+### SimulationEngine
+
+- "언제 하루를 실행할지"만 안다.
+- 시뮬레이션 시작점이다.
+- 날짜 반복과 종료 조건 확인을 담당한다.
+- 계산은 하지 않는다.
+
+### DailySimulationService
+
+- "하루를 어떻게 진행할지"만 안다.
+- 하루 시뮬레이션의 오케스트레이터다.
+- 각 서비스 호출 순서만 관리한다.
+- 계산은 하지 않는다.
+
+### Service
+
+- "자신의 계산"만 한다.
+- 다른 서비스의 흐름을 직접 조율하지 않는다.
+
+### SimulationContext
+
+- "현재 상태"만 가진다.
+- 상태 저장소이며 비즈니스 로직을 가지지 않는다.
+
+## 3. 클래스별 역할
+
+### SimulationEngine
+
+역할:
+
+- 시뮬레이션 시작점
+- 날짜 반복
+- 종료 조건 확인
+
+책임:
+
+```text
+1. SimulationContext 생성
+2. DailySimulationService 호출
+3. ResultBuilder 호출
+4. 날짜 증가
+5. 종료 조건 확인
+```
+
+### SimulationContext
+
+역할:
+
+- 현재 시뮬레이션 상태 저장
+
+책임:
+
+```text
+- 현재 날짜
+- 현재 레벨
+- 현재 경험치
+- 루틴 정보
+- 게임 데이터(JSON)
+- 기타 시뮬레이션 상태
+```
+
+### DailySimulationService
+
+역할:
+
+- 하루 시뮬레이션의 오케스트레이터
+
+책임:
+
+```text
+1. 오늘 실행할 루틴 확인
+2. ContentService 호출
+3. HuntingService 호출
+4. ItemService 호출
+5. ExpService 호출
+6. LevelService 호출
+7. 하루 결과 반환
+```
+
+### HuntingService
+
+역할:
+
+- 사냥 경험치 계산
+
+입력:
+
+```text
+- 사냥터
+- 사냥 시간
+- 마릿수
+- 도핑
+- 현재 레벨
+```
+
+출력:
+
+```text
+획득 경험치
+```
+
+### ContentService
+
+역할:
+
+- 컨텐츠 경험치 계산
+
+대상:
+
+```text
+일간
+- 몬스터파크
+- 일일퀘스트
+
+주간
+- 에픽던전
+- 익스트림 몬스터파크
+```
+
+출력:
+
+```text
+획득 경험치
+```
+
+### ItemService
+
+역할:
+
+- 이벤트 재화 처리
+
+대상:
+
+```text
+- 성장의 비약
+- 상급 EXP 쿠폰
+- 베리 티켓
+- 기타
+```
+
+출력:
+
+```text
+획득 경험치
+```
+
+### ExpService
+
+역할:
+
+- 경험치 계산 전담
+
+책임:
+
+```text
+- 경험치 추가
+- 퍼센트 ↔ 절대값 변환
+- 경험치 정규화
+```
+
+출력:
+
+```text
+변경된 경험치
+```
+
+### LevelService
+
+역할:
+
+- 레벨업 처리
+
+책임:
+
+```text
+- 레벨업 여부 확인
+- 경험치 이월
+- 버닝 이벤트 적용
+```
+
+출력:
+
+```text
+변경된 레벨
+변경된 경험치
+```
+
+### ResultBuilder
+
+역할:
+
+- UI에 표시할 결과 생성
+
+책임:
+
+```text
+- 날짜
+- 레벨
+- 경험치
+- 경험치 %
+- 획득 경험치
+```
+
+## 4. 전체 실행 흐름
+
+```text
+SimulationEngine
+      │
+      ▼
+while(종료조건)
+      │
+      ▼
+DailySimulationService
+      │
+      ├──────────────┐
+      ▼              ▼
+ContentService   HuntingService
+      │              │
+      └──────┬───────┘
+             ▼
+        ItemService
+             ▼
+        ExpService
+             ▼
+       LevelService
+             ▼
+     SimulationContext 갱신
+             ▼
+      ResultBuilder
+             ▼
+      다음 날짜
+```
+
+## 5. ExpService와 LevelService 관계
+
+`ExpService`는 `LevelService`를 직접 호출하지 않는다.
+
+```text
+ContentService / HuntingService / ItemService
+      ↓
+ExpService.addExp(...)
+      ↓
+LevelService.apply(...)
+```
+
+두 서비스는 서로 의존하지 않고, `DailySimulationService`가 호출 순서를 조율한다.
+
+## 6. 입력 모델
 
 ```text
 SimulationInput
@@ -83,7 +314,7 @@ ItemUsage
 - count
 ```
 
-## 3. 날짜 및 반복 정책
+## 7. 날짜 및 반복 정책
 
 - 시뮬레이션은 시작 날짜부터 종료 날짜까지 하루 단위로 계산한다.
 - 일간 루틴은 매일 반복한다.
@@ -92,29 +323,7 @@ ItemUsage
 - 시작 주의 주간 컨텐츠 수행 여부는 자동 추정하지 않는다.
 - 아이템은 사용자가 선택한 날짜에만 반영한다.
 
-## 4. 실행 흐름
-
-``` text
-SimulationEngine
-
-→ Context 생성
-
-→ while (date <= end)
-
-    → DailySimulationService
-
-        → HuntingService
-        → ContentService
-        → ItemService
-
-    → LevelService
-
-    → ResultBuilder
-
-    → nextDay 
-```
-
-## 5. jsonData 구조
+## 8. jsonData 구조
 
 ```text
 jsonData
@@ -123,15 +332,16 @@ jsonData
 │   ├── exp_doping_summary.json
 │   ├── level_diff_multiplier.json
 │   └── map_monster
-│       ├── grindas_maps_index.json
-│       ├── grindas_maps_arteria.json
-│       ├── grindas_maps_cernium_1.json
-│       ├── grindas_maps_cernium_2.json
-│       ├── grindas_maps_dowonkyung.json
-│       ├── grindas_maps_geardrak.json
-│       ├── grindas_maps_hotel_arcus.json
-│       ├── grindas_maps_odium.json
-│       └── grindas_maps_talahart.json
+│       └── grandis
+│           ├── _grandis_maps_index.json
+│           ├── grandis_maps_arteria.json
+│           ├── grandis_maps_cernium_1.json
+│           ├── grandis_maps_cernium_2.json
+│           ├── grandis_maps_dowonkyung.json
+│           ├── grandis_maps_geardrak.json
+│           ├── grandis_maps_hotel_arcus.json
+│           ├── grandis_maps_odium.json
+│           └── grandis_maps_talahart.json
 ├── routine
 │   ├── daily
 │   │   ├── daily_quest.json
@@ -139,50 +349,36 @@ jsonData
 │   └── weekly
 │       ├── epic_dungeon.json
 │       └── extreme_monster_park_base_exp.json
-└── other
+└── items
     ├── berry_ticket.json
     ├── exp_coupon.json
     └── growth_potion_delta.json
 ```
 
-## 6. 구현 순서
+## 9. 구현 우선순위
+
 ```text
-1. web/types
-   ├── gameData.ts
-   ├── routine.ts
-   ├── simulation.ts
-   └── result.ts
-
-2. jsonData
-   ├── level_exp_table.json
-   ├── hunting/*
-   ├── routine/*
-   └── other/*
-
-3. web/engine/services
-   ├── ExpService.ts
-   ├── LevelService.ts
-   ├── HuntingService.ts
-   ├── ContentService.ts
-   └── ItemService.ts
-
-4. web/engine/SimulationContext.ts
-
-5. web/engine/DailySimulationService.ts
-
-6. web/engine/ResultBuilder.ts
-
-7. web/engine/SimulationEngine.ts
+1. types
+2. SimulationContext
+3. ExpService
+4. LevelService
+5. HuntingService
+6. ContentService
+7. ItemService
+8. DailySimulationService
+9. ResultBuilder
+10. SimulationEngine
 ```
 
-## 7. 검증 및 테스트 기준
+## 10. 검증 및 테스트 기준
 
 ### ExpService
 
 - 퍼센트 입력을 절대 경험치로 변환한다.
 - 절대 경험치를 퍼센트로 변환한다.
-- 100% 초과 입력 시 해당 레벨 필요 경험치 - 1로 보정한다.
-- 100% 초과 입력 시 표시 퍼센트는 99.9%로 반환한다.
+- 경험치를 더한다.
+- 경험치를 정규화한다.
+- LevelService를 직접 호출하지 않는다.
 
 ### LevelService
 
@@ -194,7 +390,7 @@ jsonData
 
 ### HuntingService
 
-- 몬스터 기본 경험치, 레벨 차이 보정, 도핑 합연산, 6분당 처치 수, 사냥 시간이 모두 반영된다.
+- 몬스터 기본 경험치, 레벨 차이 보정, 도핑, 6분당 처치 수, 사냥 시간이 모두 반영된다.
 - 도핑은 사냥 경험치에만 적용된다.
 - 사용자가 처치 수를 수정하면 기본 최대 마릿수 대신 수정값을 사용한다.
 
@@ -209,7 +405,14 @@ jsonData
 
 - 아이템은 선택된 날짜에만 반영된다.
 - 성장의 비약은 현재 레벨 기준 `growth_potion_delta.json` 값을 사용한다.
-- 아이템 경험치로 레벨업하는 경우 잔여 경험치를 이월한다.
+- 아이템 경험치는 획득 경험치로 반환하고 레벨업은 처리하지 않는다.
+
+### DailySimulationService
+
+- 오늘 실행할 루틴을 확인한다.
+- ContentService, HuntingService, ItemService를 호출해 획득 경험치를 모은다.
+- ExpService 호출 후 LevelService를 호출한다.
+- 계산은 각 서비스에 위임하고 실행 순서만 관리한다.
 
 ### SimulationEngine
 
