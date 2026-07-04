@@ -44,11 +44,11 @@ Done when:
 
 ## Phase 4. LevelService
 
-- [ ] Implement required exp lookup.
-- [ ] Implement level-up check.
-- [ ] Implement overflow carryover.
-- [ ] Implement repeated level-up handling.
-- [ ] Implement burning level-up behavior.
+- [x] Implement required exp lookup.
+- [x] Implement level-up check.
+- [x] Implement overflow carryover.
+- [x] Implement repeated level-up handling.
+- [x] Implement burning level-up behavior.
 
 Done when:
 
@@ -58,11 +58,11 @@ Done when:
 
 ## Phase 5. HuntingService
 
-- [ ] Load or receive hunting map data.
-- [ ] Apply monster base exp.
-- [ ] Apply level difference multiplier.
-- [ ] Apply hunting-only doping modifiers.
-- [ ] Apply kills per 6 minutes and hunting duration.
+- [x] Load or receive hunting map data.
+- [x] Apply monster base exp.
+- [x] Apply level difference multiplier.
+- [x] Apply hunting-only doping modifiers.
+- [x] Apply kills per 6 minutes and hunting duration.
 
 Done when:
 
@@ -72,11 +72,11 @@ Done when:
 
 ## Phase 6. ContentService
 
-- [ ] Implement daily quest exp calculation.
-- [ ] Implement monster park exp calculation.
-- [ ] Implement epic dungeon exp calculation.
-- [ ] Implement extreme monster park exp calculation.
-- [ ] Apply content event bonus rate to base content exp.
+- [x] Implement daily quest exp calculation.
+- [x] Implement monster park exp calculation.
+- [x] Implement epic dungeon exp calculation.
+- [x] Implement extreme monster park exp calculation.
+- [x] Apply content event bonus rate to base content exp.
 
 Done when:
 
